@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Yum</title>
+    <title>Yum: <%= controller.action_name %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,8 +17,9 @@
   </div>
   
 
-
+  <div class=main >
     <%= yield %>
+    </div>
 
   <div class="footer">
     <br/>

@@ -15,9 +15,8 @@
   <tbody>
     <% @companies.each do |company| %>
       <tr>
-        <td><%= company.title %></td>
-        <td><%= company.description %></td>
-        <td><%= company.image_url %></td>
+        <td><span class="company_title"><%= company.title %><%= company.description %></td>
+        <td><%= image_tag "companies/#{company.image_url}" %></td>
         <td><%= company.status %></td>
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
@@ -29,5 +28,4 @@
 
 <br>
 
-<!-- <%= link_to #'Create a new Company', new_company_path, id: "new_company" %>
--->
+<%= link_to 'Create a new Company', new_company_path, id: 'new_company_path' %>
